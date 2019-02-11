@@ -1,5 +1,4 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.novoda.bintray-release'
 
 buildscript {
     repositories {
@@ -8,7 +7,6 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.novoda:bintray-release:0.8.0'
         classpath 'com.android.tools.build:gradle:3.3.1'
     }
 }
@@ -36,15 +34,4 @@ android {
     lintOptions {
         abortOnError false
     }
-}
-
-publish {
-    userOrg = 'commit451'
-    groupId = 'com.commit451'
-    artifactId = 'bypasses'
-    version = '1.0.1'
-    description = 'Repackaging of Bypass to allow for direct gradle dependencies https://github.com/Uncodin/bypass'
-    website = 'https://github.com/Commit451/bypasses'
-    issueTracker = "https://github.com/Commit451/bypasses/issues"
-    repository = "https://github.com/Commit451/bypasses.git"
 }
