@@ -12,6 +12,7 @@ buildscript {
 }
 
 android {
+    namespace 'in.uncod.android.bypass'
     compileSdkVersion rootProject.ext.compileSdkVersion
 
     defaultConfig {
