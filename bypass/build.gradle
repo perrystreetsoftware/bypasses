@@ -1,23 +1,14 @@
-apply plugin: 'com.android.library'
-
-buildscript {
-    repositories {
-        jcenter()
-        google()
-    }
-
-    dependencies {
-        classpath 'com.android.tools.build:gradle:3.6.3'
-    }
+plugins {
+    alias libs.plugins.android.library
 }
 
 android {
     namespace 'in.uncod.android.bypass'
-    compileSdkVersion rootProject.ext.compileSdkVersion
 
+    compileSdk libs.versions.android.sdk.compile.get().toInteger()
     defaultConfig {
-        minSdkVersion 14
-        targetSdkVersion rootProject.ext.targetSdkVersion
+        minSdkVersion libs.versions.android.sdk.min.get()
+        targetSdkVersion libs.versions.android.sdk.target.get()
         versionCode 101
         versionName "1.0.1"
     }
